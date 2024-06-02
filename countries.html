@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+ *{
+            padding: 1%;
+             margin: 0; 
+             box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+             url(https://cdn.nimbusthemes.com/2017/09/09233341/Free-Nature-Backgrounds-Seaport-During-Daytime-by-Pexels.jpeg);
+            background-size: cover;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+        nav{
+            width: 100%;
+            height: 100vh;
+            color: black;
+            display: flex;
+            justify-content: space-around;
+        }
+        .logo{
+            font-size: 2em;
+            letter-spacing: 2px;
+            color: white;
+
+        }
+        .MENU a{
+            text-decoration: none;
+            color: white;
+            padding:10px 20px;
+            font-size: 15px;
+            position: relative;
+        }
+        .MENU a::before{
+            content: "";
+            position:absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-bottom: 2px solid indianred;
+            transition: 0.4s linearS;
+
+        }
+        .MENU a:hover:before{
+            width: 90%;
+
+        }
+
+        .register a{
+            text-decoration: none;
+            color: white;
+            padding:10px 10px;
+            font-size: 20px;
+            background: indianred;
+            border-radius: 8px;
+            transition: 0.4s;
+
+        }
+        .register a:hover{
+            background: transparent;
+            border: 1px solid indianred;
+        }
+        .h-txt{
+            max-width: 650px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            color: white;
+        }
+        .h-txt span{
+            letter-spacing: 5px;
+        }
+        .h-txt h1{ 
+            font-size: 3.5em;
+        }
+        .h-txt a{
+            text-decoration: none;
+            background: indianred;
+            color: white;
+            padding: 10px 20px ;
+            letter-spacing: 5px;
+            transition: 0.4s;
+        }
+        .h-txt a:hover{
+            background: transparent;
+            border: 1px solid indianred;
+        }
+        .FOOT {
+
+            text-align: center ;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+             url(https://cdn.getyourguide.com/img/tour/911a80ba9f648441.jpeg/148.jpg);
+        }
+        .lbutton:hover{
+            text-align: rights;
+            background: rgb(235, 10, 10);
+            padding-left: 20px;
+
+           
+        
+        }
+        .stachu {
+            text-align: left;
+            float: left;
+        }
+        .deepu{
+            float: left;
+        }
+        .divyanshi {
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+             url(https://png.pngtree.com/thumb_back/fh260/background/20190222/ourmid/pngtree-yellow-gold-gradient-geometric-background-poster-image_49461.jpg);
+        }
+        .rohan {
+            background-color: white;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+             url(https://png.pngtree.com/thumb_back/fh260/background/20230305/pngtree-green-background-images-free-zoom-hd-wallpapers-vector-image_1786088.jpg)
+        }
+        .anuj{
+            background-color: white;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+             url(https://st2.depositphotos.com/2143989/5922/v/450/depositphotos_59227109-stock-illustration-abstract-magic-red-light-background.jpg)
+        }
+        .MOM{
+            background-color: white;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+             url(https://img.freepik.com/free-vector/gold-luxury-background_23-2148596333.jpg)
+        }
+        .PAPA {
+            background-color: white;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+             url(https://img.freepik.com/free-vector/white-abstract-background_23-2148817571.jpg)
+
+        }
+        .yesh{
+            background-color: white;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+             url(https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-cyan-blue-dynamic-shadow-abstract-vector-background-business-cool-colorful-bright-image_2806085.jpg)
+        }
+        .bagga {
+            background-color: white;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+            url(data:image/jpeg;base64,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)
+
+        }
+
+        
+        .yogita{
+            text-align: center;
+            font-size: xx-large;
+            background: yellow;
+        }
+        .kangaruu{
+            text-align: center;
+            font-size: xx-large;
+            background: yellow;
+        }
+        .bharat{
+            text-align: center;
+            font-size: xx-large;
+            background: yellow;
+
+        }
+        .british{
+            text-align: center;
+            font-size: xx-large;
+            background: yellow;
+        }
+        .chutyaa{
+            text-align: center;
+            font-size: xx-large;
+            background: yellow;
+        }
+        .doggy {
+            text-align: center;
+            background-color: blueviolet;
+
+            padding: 100px;
+            border-radius: 10px ;
+            margin: 20px;
+        }
+               
+    </style>
+
+
+
+
+</head>
+<body>
+</header>
+<section>
+    <div class="yogita "> PARIS </div> 
+    <img src="https://images.adsttc.com/media/images/5d44/14fa/284d/d1fd/3a00/003d/large_jpg/eiffel-tower-in-paris-151-medium.jpg?1564742900" width="100%" height="50%">
+    <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia magnam atque delectus accusamus excepturi nostrum nihil quidem quisquam, error, a distinctio blanditiis, aspernatur placeat aliquam maiores ullam quis repudiandae quam soluta. Dicta aperiam quaerat impedit distinctio incidunt at tempora sed sint porro quibusdam, velit laudantium itaque voluptas aliquid eum nobis quasi numquam. Sed soluta reprehenderit dolorum blanditiis obcaecati deserunt quaerat vitae magnam. Dignissimos voluptates molestiae cupiditate laudantium ea placeat sed ullam officiis magni sit quaerat aperiam dolore, modi molestias facilis porro, doloremque dolorum sapiente veritatis? Consectetur fugit velit eum vel consequuntur dolore dolor quia, fuga aperiam nostrum, omnis voluptatem ut ad illum placeat odio ab neque? Doloribus aspernatur exercitationem asperiores tempore repudiandae eius, atque eaque dicta ut, similique enim voluptas, natus at voluptatibus suscipit doloremque quae! Tenetur facilis, aspernatur at veritatis illo perspiciatis laborum architecto odio sapiente est libero cumque ipsum tempora excepturi earum rerum? Molestiae voluptatibus eligendi expedita perspiciatis doloribus qui accusantium error aperiam, maiores, repellat iste necessitatibus, nobis deserunt esse saepe eum labore. Dolorum culpa reprehenderit, quo eum, veritatis atque dicta officiis perspiciatis et quos similique molestias expedita nulla! Nihil delectus qui molestias, reprehenderit quod excepturi quo cumque fugiat fugit error aperiam natus magnam possimus saepe aut ullam.</h1>
+
+    <div class="kangaruu"> AUSTRALIIA</div>
+    <img src="https://blog.thomascook.in/wp-content/uploads/2017/12/Untitled-design-13.png"  width="100%" height="50%">
+    <h1> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quaerat nam, quidem tempore numquam facilis dolorem ipsum hic fugiat dolores repellat recusandae eius officia, eligendi totam cumque beatae. Inventore tempore id repudiandae. Reiciendis, odio? Nam doloremque maiores dolore ab dolor laborum id qui ipsum quo hic debitis veritatis corporis, deserunt voluptatum unde officia, rem accusamus sit enim aspernatur in, sunt ea magni. Voluptatum reprehenderit ipsa voluptas maiores veniam labore iure harum aliquam tempore velit placeat pariatur distinctio vitae porro, eum dolorum laudantium culpa, nesciunt sed voluptate iusto necessitatibus suscipit molestias laborum. Earum consectetur iste sapiente a quos. Deleniti earum voluptates quo itaque porro. Quo nam ipsa tenetur odio ducimus? Cumque, vel unde vitae aut at reiciendis incidunt vero eius saepe accusamus ut quo aperiam libero odit dicta sit quas qui! Ad a quidem nemo, corporis saepe cupiditate laboriosam beatae delectus corrupti numquam possimus officiis maiores porro iure culpa debitis vitae? Quibusdam officiis harum tempora eaque minus neque velit consequuntur, atque aspernatur nemo, aperiam error quidem, aliquam natus sequi explicabo architecto fugit. Inventore earum amet dicta necessitatibus impedit aliquam, consequuntur error. Provident voluptas vitae inventore maiores, dolore quos, cum architecto dolorum veniam cupiditate dignissimos assumenda nemo vero, magni accusamus adipisci aliquam?</h1>
+
+    <div class="bharat">INDIA</div>
+    <img src="https://hblimg.mmtcdn.com/content/hubble/img/delhi/mmt/activities/m_activities_delhi_red_fort_l_341_817.jpg" width="100%" height="50%">
+    <h1> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias neque repellat tempora, eligendi fugit assumenda eveniet adipisci ad, eos eius rerum itaque vel similique ex accusantium ut voluptas quidem dolorum animi nostrum delectus exercitationem. Minus est necessitatibus dolorem? Eum iure earum consectetur possimus aspernatur animi consequuntur ex repellat aliquam, ratione corporis quia deserunt in quasi et unde eaque error obcaecati assumenda magnam maiores! Totam, sequi itaque necessitatibus error minus laudantium soluta accusamus in doloribus dolor, possimus, pariatur asperiores ad? Nihil optio laboriosam dolorum id quasi accusamus modi, ut dicta quo est quod nam, eligendi explicabo tenetur a? Aliquid, omnis officiis corrupti quibusdam vero animi fugiat veniam saepe minus nemo modi ducimus nostrum magni velit consectetur odio obcaecati voluptates commodi in, impedit itaque accusantium quia. Cumque quo sunt quas voluptas accusantium quod possimus voluptatibus molestias nobis rerum omnis consectetur corporis, deserunt eius at maxime nihil labore optio quasi magni eaque illum nemo. Est repudiandae, eaque tempore inventore quas mollitia fugit cupiditate aspernatur iusto aliquid ducimus maxime, quisquam ad omnis, expedita nesciunt! Beatae rem deserunt commodi autem reprehenderit, earum quod alias nihil saepe eos non incidunt. Illo nulla alias vero quod quisquam exercitationem accusamus corporis, vel porro, aliquid neque. Quaerat, officia amet.</h1>
+
+    <div class="british"> ENGLAND </div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/London_Eye_-_tunliweb.no.JPG" width="100%" height="50%">
+    <h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam eligendi, qui odio est, voluptatem necessitatibus magnam, harum mollitia perspiciatis natus ab minima? Eligendi voluptatem hic minima! Pariatur atque nobis quidem, dignissimos nulla facilis quas nisi assumenda, cumque praesentium nemo minima libero rem vel dolore sequi repellat. Ipsam, aspernatur quas veniam voluptas laborum ab? Ipsam sed perferendis illum in deleniti magni rem vero deserunt pariatur. Distinctio atque sunt quia. Omnis, placeat dolores eos nostrum voluptatum aut repudiandae distinctio error quidem, autem perspiciatis provident temporibus. Reprehenderit amet repellat repudiandae possimus commodi dicta dolores tenetur debitis eaque voluptatibus, est modi perferendis magni explicabo maiores atque totam deleniti aspernatur rerum nam! Consequuntur ad modi ea, temporibus distinctio accusamus dolorum. Quam, accusantium veritatis officiis magni incidunt velit omnis mollitia temporibus, rem itaque veniam quos recusandae delectus numquam ullam maiores, hic quis exercitationem? Voluptates obcaecati recusandae, rerum reiciendis quia aliquid dicta temporibus molestiae nemo magnam. Quibusdam illum ut libero necessitatibus? Natus sapiente cum provident id a aliquid. Labore vero, numquam asperiores fuga libero nam ratione ipsam vel dolorum adipisci iure possimus nobis distinctio aliquid natus tempore mollitia sit eaque esse necessitatibus quia assumenda. Cum reiciendis distinctio nisi molestias, velit neque, quo facere ad aspernatur natus minus!</h1>
+
+    <div class="chutyaa "> RUSSIA </div>
+    <img src="https://ihplb.b-cdn.net/wp-content/uploads/2021/11/St.-Basils-Cathedral-799x430.jpg" width="100%" height="50%">
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora aut facilis consectetur officia debitis consequuntur quam quis perspiciatis optio, harum quidem fugit placeat, doloremque assumenda sed voluptatum corrupti! Explicabo debitis natus quisquam rem ipsum eaque doloremque ad. Dignissimos labore quos tempora, dolor totam amet cumque qui at exercitationem. Aliquam eligendi ad nihil rem omnis qui similique quisquam ut dolor eaque! Inventore dignissimos tempora cumque sunt officia numquam sapiente qui, exercitationem odit natus possimus, neque fuga ab dolor cum. Officiis ea quisquam deleniti id adipisci excepturi impedit quia iste a rem dolores debitis magnam placeat similique aut, corrupti error! Corporis, temporibus laborum veritatis ad alias libero a odio iure. Placeat blanditiis, quasi aut aliquid suscipit magnam, esse voluptates cum fuga illum molestiae. Optio nam voluptatibus eligendi inventore ipsam adipisci veniam deleniti exercitationem voluptate, ipsum, doloremque facilis enim soluta unde laudantium ullam nostrum animi earum rem natus? Ipsa ab inventore, repudiandae rerum qui aperiam repellat nam in incidunt voluptates deleniti a reprehenderit doloremque, hic atque rem, facere nulla distinctio iure ipsum odit sunt veniam est quam. Odit assumenda sed aliquid non alias nemo doloremque possimus sequi, soluta architecto ullam deleniti minus perspiciatis sint dolorem impedit iste repudiandae! Itaque nihil est alias fugit?</h1>
+
+
+
+
+</section>
+     <div class="bagga "> 
+        <h1> SOO... WHAT ARE YOU WATING FOR....</h1>
+     </div>
+    <div class="yesh">
+        <h1> BE.. LIKE.. A..BIRD.. </h1>
+
+    </div>
+    <div class="rohan ">
+        <h1>LETS... GOO TO A WONDER FULL TRIP </h1>
+
+    </div>
+    <div class="anuj" >
+        <h1> LETS... EXPLOREE.. THE WORLD</h1> 
+    </div> 
+    <div  class="MOM">
+        <h1> LETS...... ROCKkkkkk... </h1>
+    </div>
+    <div class="PAPA"> 
+        <h1> LETS GOOO........</h1>
+    </div>
+
+
+
+
+    <a href="countries.html"></a>
+</body>
+</html>
